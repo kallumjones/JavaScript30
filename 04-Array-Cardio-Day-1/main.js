@@ -97,13 +97,13 @@
       // Sum up the instances of each of these
       const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
   
-      const dataInstances = data.reduce((agg, cur) => {
-        if(Object.keys(agg).includes(cur)){
-          agg[cur]++;
+      const dataInstances = data.reduce((obj, transport) => {
+        if(Object.keys(obj).includes(transport)){
+          obj[transport]++;
         } else {
-          agg[cur] = 1;
+          obj[transport] = 1;
         }
-        return agg;
+        return obj;
       },{})
 
   console.log(dataInstances); 
